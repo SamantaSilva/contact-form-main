@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style/Style.css">
+
+  <title>Contact form</title>
+
+</head>
+
+<body>
+  <div class="main-container">
+    <form class="formulario" action="post" id="form">
+      <h1 class="main-container-titulo">Contact Us</h1>
+      <div class="name">
+        <div class="name-group">
+        <label for="fisrt-name">Firt name</label>
+        <input type="text" required minlength="3" id="fisrt-name" oninput="validaNome()">
+        <span class="span-required">O nome precisa ter mais de 2 caracteres</span>
+      </div>
+      <div class="name-group">
+        <label for="last-name">Last name</label>
+        <input type="text" required minlength="3" id="last-name" oninput="validaSobrenome()">
+        <span class="span-required">O sobrenome precisa ter mais de 2 caracteres</span>
+      </div>
+
+      </div>
+
+      <div class="email">
+        <label for="email">Email Address</label>
+        <input type="email" required minlength="4" id="email" oninput="emailValidate()">
+        <span class="span-required">Digite um e-mail válido</span>
+
+      </div>
+
+      <div class="query-type">
+        <div class="query-type-general-enquiry">
+        <input type="checkbox" id="general-enquiry" class="query-checkbox">
+        <label for="general-enquiry">General enquiry</label>
+      </div>
+      <div class="query-type-support-request">
+        <input type="checkbox" id="Support-request" class="query-checkbox">
+        <label for="Support-request">Support Request</label>
+      </div>
+      </div>
+
+      <div class="message" oninput="messageValidate()">
+        <label for="message">Message</label>
+        <textarea type="text" minlength="10" maxlength="100" id="message" required></textarea>
+        <span class="span-required">Digite um mensagem de no minimo 10 caractere e no máximo 100 caracteres</span>
+      </div>
+
+      <div class="aceite">
+        <input type="checkbox" id="aceite" required oninput="validateAceite()">
+        <label for="aceite"> I consent to being contacted by the team</label>
+        <span class="span-required">É necessário dar o consentimento para prosseguir</span>
+      </div>
+      <button type="submit" id="botao">Submit</button>
+    </form>
+
+  </div>
+  <script src="./js/script.js"> </script>
+</body>
+
+</html>
